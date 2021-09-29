@@ -39,7 +39,7 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/LaCasadeEtiket_bot?startgroup=a'),
-                       Button.url('📣 Support', 'https://t.me/kurtadamoyunuu'),
+                       Button.url('📣 Support', 'https://t.me/fjdjdjdhdhhrhf5'),
                       Button.url('👮‍♂️ Sahibim', 'https://t.me/Furkanbeyy')]
                     ),
                     link_preview=False
