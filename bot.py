@@ -28,7 +28,7 @@ async def start(event):
   await event.reply("**LaCasade Etiketleme Bot**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★\nDaha fazla bilgi için **/help**'i tıklayın.",
                     buttons=(
                       [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/LaCasadeEtiket_bot?startgroup=a'),
-                      Button.url('📣 Support', 'https://t.me/kurtadamoyunuu'),
+                      Button.url('📣 Support', 'https://t.me/fjdjdjdhdhhrhf5'),
                       Button.url('👮‍♂️ Sahibim', 'https://t.me/Furkanbeyy')]
                     ),
                     link_preview=False
