@@ -56,7 +56,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Процесс упоминание участников завершен** 🛑 **Хорошего дня**")
+        await event.respond("**Остановлено!**")
         return
       if usrnum == 15:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
