@@ -50,13 +50,13 @@ async def help(event):
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("__Bu komut gruplarda ve kanallarda kullanılabilir.!__")
+    return await event.respond("**Эту команду можно использовать в группах и каналах!**")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("__Yalnızca yöneticiler hepsinden bahsedebilir!__")
+    return await event.respond("**Только администраторы могут упоминать всех!**")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -65,11 +65,11 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("__Eski mesajlar için üyelerden bahsedemem! (gruba eklemeden önce gönderilen mesajlar)__")
+        return await event.respond("🤖")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Bana bir argüman ver!__")
+    return await event.respond("Дайте мне аргумент!")
   else:
-    return await event.respond("__Bir mesajı yanıtlayın veya başkalarından bahsetmem için bana bir metin verin!__")
+    return await event.respond("**Ответить на сообщение или дать мне текст, чтобы упомянуть других!**")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -79,7 +79,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Etikeletme İşlemi Bitti 🛑 İyi günler dileriz 🤗")
+        await event.respond("**Процесс упоминание участников завершен** 🛑 **Хорошего дня**")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -97,7 +97,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌")
+        await event.respond("Процесс успешно остановлен ❌")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
