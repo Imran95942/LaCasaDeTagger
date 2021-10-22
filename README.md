@@ -7,7 +7,7 @@ _**Bu bot, gruplarda 10.000'e kadar üyeden bahsedebilir ve kanallarda 200'e kad
 - yakında yeni notlarım gelecektir. 
 
 ### 🚀 Deploy to heroku
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/furkanbeey/LaCasaDeTagger)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Imran95942/LaCasaDeTagger)
 
 ### 🎯 Krediler ve Diğer
 - [Furkan Bey](https://t.me/Furkanbeyy) Telegram'dan aramak için Beni Bulun 🕺
