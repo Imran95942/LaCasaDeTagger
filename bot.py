@@ -62,7 +62,7 @@ async def mentionall(event):
         return
       if usrnum == 30:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
-        await asyncio.sleep(1)
+        await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
         
@@ -80,7 +80,7 @@ async def mentionall(event):
         return
       if usrnum == 30:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
-        await asyncio.sleep(1)
+        await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
 
