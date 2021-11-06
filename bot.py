@@ -22,6 +22,9 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
 
+    if not admin and not creator:
+        await event.respond("I Am Not An Admin Here!")
+        return
 
 @client.on(events.NewMessage(pattern="^/all ?(.*)"))
 async def mentionall(event):
