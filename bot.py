@@ -33,11 +33,7 @@ async def mentionall(event):
     admins.append(admin.id)
   if not event.sender_id in admins:
     return await event.respond("**Только администраторы могут упоминать всех!**")
-   
-   if not admin and not creator:
-        await event.respond("I Am Not An Admin Here!")
-        return
-
+  
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
     msg = event.pattern_match.group(1)
